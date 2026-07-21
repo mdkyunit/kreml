@@ -109,9 +109,9 @@ pub fn generate_cities_ussr() -> Vec<City> { //might make this a generic generat
             is_destroyed: false,
         },
         City {
-            id: kiev,
-            population: city_base_population::KIEV_POPULATION,
-            name: String::from("Kiev"),
+            id: Kyiv,
+            population: city_base_population::KYIV_POPULATION,
+            name: String::from("Kyiv"),
             is_destroyed: false,
         },
         City {
