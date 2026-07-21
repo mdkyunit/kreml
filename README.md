@@ -4,7 +4,9 @@ A terminal based nuclear war simulator. Will use scientific calculations of fact
 1. All countries that had nuclear weapons during the cold war, circa 1984 will be playable including the United States, USSR, United Kingdom, France, and china. Time period subject to change.
 2. An as realistic-- but still videogame-y terminal interface for controlling your nuclear arsenal using terminal inputs. Think of "War Games".
 3. Other countries will be computer controlled, reacting to your decisions. However, I want to use rng to ensure every time you play it is different.
+4. Multi threading??? Possible. I don't want the game world to stop while you are deciding what input to do next. The scale of time in this game is undecided. I cant even think of how to begin to implement a time keeping system. However i feel like 1 day per minute for decision to occur seems reasonable.
+5. 
 # Language
-1. This will be the most difficult decision for me. Rust will be my first choice, as the memory safety will ensure users playing this game are not subject to security risks and memory leaks possible with C, the language I am most familiar with. However, C++ is my second choice, due to the extensive featureset that will make memory safe code easier while still being familiar to me. I may develop some libraries for a C++ version in C so I can use a language I am most familiar with.
+I've commited to using rust for this project. 
 # Game Engine
 I will be creating the game engine myself.
