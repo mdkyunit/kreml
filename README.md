@@ -1,4 +1,4 @@
-# kreml
+# K.R.E.M.L
 A terminal based nuclear war simulator. Will use scientific calculations of factors such as fallout to calculate fatalities in order to create a chillingly immersive nuclear war sim.
 # Features (Planned)
 1. All countries that had nuclear weapons during the cold war, circa 1984 will be playable including the United States, USSR, United Kingdom, France, and china. Time period subject to change.
