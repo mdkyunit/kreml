@@ -5,9 +5,10 @@ use crossterm::{
     ExecutableCommand,
     event,
 };
-use crate::world::{city_id, City, Country, CountryID};
+use crate::game::{game_loop, init_game};
+use crate::world::{CityID, City, Country, CountryID};
 use crate::world::CountryID::USSR;
-use crate::input::{get_input, playerinput};
+use crate::input::{get_input, PlayerInput};
 mod display;
 mod input;
 mod game;
@@ -22,31 +23,6 @@ will be using main to initiate display, game logic as well as
 initialize countries and cities.
  */
 fn main() {
-    let mut game:GameGlobal = init_game();
-    game_loop(&mut game);
-}
-fn game_loop(game: &mut GameGlobal) {
-    let mut player:playerinput;
-        player = get_input(&game);
-        game.active_countries[0].cities[player.target.1].check_targeted(&player);
-    //USSR_Country.cities[player.target.1].check_targeted(&player);
-
-}
-fn init_game() -> GameGlobal {
-    let mut game:GameGlobal = GameGlobal {
-        active_countries: Vec::new(),
-    };
-    let mut countries: Vec<Country> = Vec::new();
-    let mut USSR_Country:Country = Country {
-        id:USSR,
-        name: "USSR".to_string(),
-        population: 0,
-        cities: Vec::new(),
-        cities_count: 0,
-    };
-    USSR_Country.new(CountryID::USSR);
-    countries = vec![USSR_Country];
-    game.active_countries = countries;
-    println!("Active city count {}", game.active_countries[0].cities.len());
-    return game;
+    let mut game:GameGlobal = init_game(); //initialize game countries.
+    game_loop(&mut game); //begins game loop
 }

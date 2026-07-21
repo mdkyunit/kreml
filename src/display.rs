@@ -31,7 +31,7 @@ pub fn asciidisplay(menu: MenuType) {
         },
     }
 }
-pub fn splashscreen() -> std::io::Result<()> { // For games splash screen when its opened
+pub fn splashscreen() -> io::Result<()> { // For games splash screen when its opened
     stdout()
         .execute(Clear(ClearType::All))?
         .execute(SetForegroundColor(Color::Red))?
