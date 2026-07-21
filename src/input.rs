@@ -47,9 +47,9 @@ pub fn get_input(game: &GameGlobal) -> playerinput { // i hate this fucking func
 }
 fn city_id_fromname(input: &String, game: &GameGlobal) ->  (city_id, usize) {// so much pain to get this fuckass funtion to work.
     let user_inp: String = input.clone();
-    for i in 0..game.active_countries[0].cities.len() {                                 //then compares the name of each city to the users input. Then returns the cities ID and index on
-        if game.active_countries[0].cities[i].get_name().to_lowercase().as_str() == user_inp {//takes the length of the array of generated cities from its parent country
-            let city_target = game.active_countries[0].cities[i].get_id();       // the parent countries vector
+    for i in 0..game.active_countries[0].cities.len() {                                 //takes the length of the array of generated cities from its parent country
+        if game.active_countries[0].cities[i].get_name().to_lowercase().as_str() == user_inp {//then compares the name of each city to the users input. Then returns the cities ID and index on the parent countries vector
+            let city_target = game.active_countries[0].cities[i].get_id();
             return city_target;
         } else {
             continue;
